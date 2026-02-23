@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejemplo Backend con JSON</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-size: 20px;
+        }
+
+        .elEstilo {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        h1 {
+            color: darkgreen;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer{
+            text-align: center;
+            font-size: 15px;
+        }
+
+        table {
+            width: 300px;
+            margin: 20px auto;
+            padding: 5px auto;
+            border: 2px solid;
+            align-content: center;
+        }
+
+        th, td, tr {
+            border: 1px solid;
+        }
+
+        textarea{
+            width: 300px;
+            height: 80px;
+            padding: 5px auto;
+        }
+    </style>
+</head>
+<body>
+    <main> 
+        <div class="elEstilo">
+            <h1>Calculadora de Cuotas de Préstamo</h1>
+            <!– la informacion se codificarán en tuplas clave=valor separadas por '&' –>
+            <form id="generarTransaccion">
+                <table>
+                    <caption>Cálculo de Cuota Mensual</caption>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" value="Juan Pérez" id="elNombre" required></td>
+                        </tr>
+                        <tr>
+                            <td>Préstamo ($)</td>
+                            <td><input type="text" value="1000000" id="elPrestamo" required></td>
+                        </tr>
+                        <tr>
+                            <td>Meses</td>
+                            <td><input type="text" value="12" id="losMeses" required></td>
+                        </tr>
+                        <tr>
+                            <td>Interés (%)</td>
+                            <td><input type="text" value="15" id="elInteres" required></td>
+                        </tr>                
+                        <tr>
+                            <td colspan="2"><input type="submit"  value="Enviar"></td>              
+                        </tr>                                 
+                    </tbody>
+                </table>                          
+            </form>
+            <textarea id="resultado" readonly></textarea>
+        </div>
+    </main>
+    <footer> 
+        <hr>    
+        Fuente propia para el curso de Estructura de Datos 1 en la Universidad Autónoma de Occidente
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+
+
